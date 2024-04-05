@@ -5,6 +5,6 @@ class Solution:
         for i,n in enumerate(nums):
             if (target-n) in d:
                 return [d[target-n],i]
-            d[nums[i]]=i
+             d[nums[i]]=i
         return
         
