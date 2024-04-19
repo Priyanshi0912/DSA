@@ -3,7 +3,7 @@ class Solution:
         n=len(grid)
         m=len(grid[0])
         ans=0
-        visited=set()
+        
         def dfs(grid,i:int,j:int):
             if (i<0 or j<0 or i==n or j==m or grid[i][j]=="0" ):
                 return
