@@ -1,0 +1,26 @@
+class Solution(object):
+    def func(self,s,left,right,dp):
+        if left>=right:
+            return True
+        if dp[left][right]!=-1:
+            return dp[left][right]
+        if s[left]==s[right]:
+            dp[left][right]= self.func(s,left+1,right-1,dp)
+        else:
+            dp[left][right]=False
+        return dp[left][right]
+    def countSubstrings(self, s):
+        n=len(s)
+        dp=[[-1]* n for _ in range(n)]
+        ans=0
+        
+        for i in range(n):
+            for j in range(i,n):
+                if self.func(s,i,j,dp):
+                    ans+=1
+        return ans
+        """
+        :type s: str
+        :rtype: int
+        """
+        
