@@ -1,5 +1,5 @@
 class Solution:
-        def merge(self,arr,low,mid,high):
+        def merge(self,arr,low,mid,high):  #merging
             temp=[]
             left=low
             right=mid+1
@@ -22,7 +22,7 @@ class Solution:
             for i in range(low,high+1):
                 arr[i]=temp[i-low]
                 
-        def mergeSort(self,arr,low,high):
+        def mergeSort(self,arr,low,high):  #divinding
             if low>=high:
                 return
             mid=(low+high)//2
